@@ -1,0 +1,125 @@
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 8.0.46 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2026, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create database viggi;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| aadhar             |
+| aiml               |
+| bhargavi           |
+| book               |
+| books              |
+| class              |
+| clause             |
+| college            |
+| crt                |
+| customer           |
+| customers          |
+| d                  |
+| department         |
+| employee           |
+| employes           |
+| information_schema |
+| library            |
+| mahi               |
+| mech               |
+| mechanical         |
+| mobile             |
+| mysql              |
+| onlinebooks        |
+| pace               |
+| performance_schema |
+| product            |
+| sagar              |
+| sakila             |
+| sales              |
+| salman             |
+| student            |
+| sys                |
+| users              |
+| viggi              |
+| vighnesh           |
+| world              |
++--------------------+
+36 rows in set (0.04 sec)
+
+mysql> use vighnesh;
+Database changed
+mysql> create table book(book_id int,
+    -> title varchar(20),
+    -> author varchar(15),
+    -> published_date date,
+    -> price decimal(6,2))
+    -> ;
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> show tables;
++--------------------+
+| Tables_in_vighnesh |
++--------------------+
+| book               |
++--------------------+
+1 row in set (0.02 sec)
+
+mysql> desc book;
++----------------+--------------+------+-----+---------+-------+
+| Field          | Type         | Null | Key | Default | Extra |
++----------------+--------------+------+-----+---------+-------+
+| book_id        | int          | YES  |     | NULL    |       |
+| title          | varchar(20)  | YES  |     | NULL    |       |
+| author         | varchar(15)  | YES  |     | NULL    |       |
+| published_date | date         | YES  |     | NULL    |       |
+| price          | decimal(6,2) | YES  |     | NULL    |       |
++----------------+--------------+------+-----+---------+-------+
+5 rows in set (0.02 sec)
+
+mysql> create table student(student_id INT,
+    -> student_name TEXT,
+    -> department TEXT);
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> desc student;
++--------------+------+------+-----+---------+-------+
+| Field        | Type | Null | Key | Default | Extra |
++--------------+------+------+-----+---------+-------+
+| student_id   | int  | YES  |     | NULL    |       |
+| student_name | text | YES  |     | NULL    |       |
+| department   | text | YES  |     | NULL    |       |
++--------------+------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> create table persons (
+    -> personID int,
+    -> lastname varchar(255),
+    -> firstname varchar(255),
+    -> address varchar(255),
+    -> city varchar(255));
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> desc persons;
++-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| personID  | int          | YES  |     | NULL    |       |
+| lastname  | varchar(255) | YES  |     | NULL    |       |
+| firstname | varchar(255) | YES  |     | NULL    |       |
+| address   | varchar(255) | YES  |     | NULL    |       |
+| city      | varchar(255) | YES  |     | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql>
