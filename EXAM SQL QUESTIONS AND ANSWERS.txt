@@ -1,0 +1,42 @@
+1. Add an email column to the employees table with VARCHAR data type.
+-> ALTER TABLE Employees
+->ADD email VARCHAR(100);
+2 . insert 4 records into the departments table .
+-> INSERT INTO Departments (DepartmentsID,departmentName)
+ VALUES
+ (101,'HR'),
+ (102,'FINANCE'),
+ (103,'IT'),
+ (104,'SALES');
+
+3. update the department name from HR to finance where departmentID IS 101.
+->
+ UPDATE DEPARTMENTS
+ SET departmentName = 'finance'
+ WHERE DepartmentID = '101';
+
+
+4. display employee firstname,salary, and department name from employees and department tables.
+->
+
+
+
+5. display the firstname,lastname, and department name of all employees,including employees who are not assigned to any department.use a RIGHT JOIN.
+->
+
+
+
+
+6. delete the employee record whose EmployeeID is 3.
+->
+ DELETE FROM Employees
+
+ WHERE EmployeeID = 3;
+
+
+
+7. find the number of departments available in the departments table .
+
+
+
+8. find the average salary of employees .
